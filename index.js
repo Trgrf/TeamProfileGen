@@ -8,15 +8,10 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
-// Rendering function
-// const render = require("./lib/htmlRenderer");
-// Alternative rendering function
 const render = require("./lib/page-template.js");
 
-
 const teamMembers = [];
-// Create an id array to store the ids.
-// This array will be used to check the potential duplicate id newly entered by user
+
 const idArray = [];
 
 function appMenu() {
@@ -141,15 +136,12 @@ function appMenu() {
   }
 
   function buildTeam() {
-    // Create the output directory if the output path doesn't exist
     if (!fs.existsSync(OUTPUT_DIR)) {
       fs.mkdirSync(OUTPUT_DIR)
     }
     fs.writeFileSync(outputPath, render(teamMembers), "utf-8");
   }
-
   createManager();
-
 }
 
 
