@@ -95,7 +95,7 @@ function appMenu() {
       {
         type: 'input',
         name: 'EngineerGithub',
-        message: 'What is the Engineers Office number?'
+        message: 'What is the Engineers GitHub?'
       }
     ]).then(answers => {
       const engineer = new Engineer(answers.EngineerName, answers.EngineerId, answers.EngineerEmail, answers.EngineerGithub);
@@ -110,22 +110,22 @@ function appMenu() {
       {
         type: 'input',
         name: 'internName',
-        message: 'What is the interns Name?'
+        message: 'What is the Interns Name?'
       },
       {
         type: 'input',
         name: 'internId',
-        message: 'What is the interns Id?'
+        message: 'What is the Interns Id?'
       },
       {
         type: 'input',
         name: 'internEmail',
-        message: 'What is the interns Email?'
+        message: 'What is the Interns Email?'
       },
       {
         type: 'input',
         name: 'internSchool',
-        message: 'What is the interns Office number?'
+        message: 'What is the Interns School?'
       }
     ]).then(answers => {
       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
